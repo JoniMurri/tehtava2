@@ -9,19 +9,5 @@ function myFunction(sana) {
   return sana === kaanteinen;
 }
 
-const rl = readline.createInterface({
-  input: process.stdin,
-  output: process.stdout,
-});
-
-rl.question(
-  "Anna sana, jonka haluat tarkistaa (onko se palindromi): ",
-  (sana) => {
-    if (myFunction(sana)) {
-      console.log(`"${sana}" on palindromi.`);
-    } else {
-      console.log(`"${sana}" ei ole palindromi.`);
-    }
-    rl.close();
-  }
-);
+console.log(myFunction("Saippuakauppias"));
+console.log(myFunction("javascript"));
