@@ -1,4 +1,4 @@
-const readline = require("readline");
+const input = require("readline-sync");
 
 function myFunction(sana) {
   sana = sana.toLowerCase().replace(/[^a-zA-Z0-9]/g, "");
@@ -9,5 +9,10 @@ function myFunction(sana) {
   return sana === kaanteinen;
 }
 
-console.log(myFunction("Saippuakauppias"));
-console.log(myFunction("javascript"));
+var sana = input.question("Anna sana tarkistettavaksi: ");
+
+if (myFunction(sana)) {
+  console.log(`"${sana}" on palindromi!`);
+} else {
+  console.log(`"${sana}" ei ole palindromi.`);
+}
